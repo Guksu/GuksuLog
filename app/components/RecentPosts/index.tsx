@@ -17,10 +17,10 @@ export default function RecentPosts() {
                   <h4 className="text-3xl font-semibold transition-colors duration-200 ">
                     {post.title}
                   </h4>
-                  <p className="my-3 text-sm text-slate-800 transition-colors duration-200 ">
+                  <p className="my-3 text-m text-slate-500 transition-colors duration-200 ">
                     {post.summary}
                   </p>
-                  <span className="text-sm text-gray-500">{post.date}</span>
+                  <span className="text-sm  text-gray-500">{post.date}</span>
                 </Link>
               </li>
             );
