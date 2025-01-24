@@ -20,7 +20,7 @@ export default function PostsPage() {
       </header>
 
       <article className="mt-24">
-        <ol className="flex flex-col space-y-4 max-w-xl">
+        <ol className="flex flex-col gap-5 space-y-4 max-w-xl">
           {POSTS.map((post) => {
             return (
               <li
@@ -28,11 +28,11 @@ export default function PostsPage() {
                 className="border-b border-gray-200 pb-4 cursor-pointer"
               >
                 <Link href={`/posts/${post.idx}`} className="block">
-                  <h4 className="text-4xl font-semibold transition-colors duration-200 ">
+                  <h4 className="text-3xl font-semibold transition-colors duration-200 ">
                     {post.title}
                   </h4>
-                  <p className="my-3 text-xl text-slate-800 transition-colors duration-200 ">
-                    {post.content}
+                  <p className="my-3 text-sm text-slate-800 transition-colors duration-200 ">
+                    {post.summary}
                   </p>
                   <span className="text-sm text-gray-500">{post.date}</span>
                 </Link>

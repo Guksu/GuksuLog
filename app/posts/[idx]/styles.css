@@ -1,0 +1,58 @@
+/* 외부 컨테이너 */
+.content-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+/* 제목 스타일 */
+.content-container h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+/* 제목 스타일 */
+.content-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.content-container p {
+  font-size: 1rem;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+/* 리스트 스타일 */
+.content-container ol {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  list-style-type: decimal;
+}
+
+.content-container li {
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+/* 코드 블록 스타일 */
+.content-container pre {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content-container code {
+  background-color: #f5f5f5;
+  color: #d63384; /* 눈에 편한 색상 */
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}

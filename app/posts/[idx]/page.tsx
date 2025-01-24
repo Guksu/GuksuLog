@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { BackBtn } from "../components";
+import "./styles.css";
 
 type Post = {
   idx: number;
@@ -68,13 +69,10 @@ export default async function Posts({ params }: Props) {
           <span className="block mt-3 text-sm text-gray-500 border-b border-gray-200 pb-4 ">
             {post.date}
           </span>
-          <p className="mt-5">
-            {post.content}
-            {post.content}
-            {post.content}
-            {post.content}
-            {post.content}
-          </p>
+          <div
+            className="mt-5 content-container"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
         </article>
       </div>
     </div>
