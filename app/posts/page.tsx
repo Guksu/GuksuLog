@@ -1,11 +1,25 @@
 import Link from "next/link";
 import POSTS from "@/json/posts.json";
+import { BackBtn } from "./components";
 
 export default function PostsPage() {
   return (
     <div className="flex flex-col items-center justify-center px-5 py-10">
-      <p className="font-mono font-semibold text-3xl text-teal-500">Posts</p>
-      <article className="mt-8">
+      <header className="fixed top-0 left-0 w-full bg-white z-10">
+        <div className="flex items-center justify-between max-w-xl mx-auto py-10 px-5">
+          <div className="flex items-center">
+            <BackBtn />
+          </div>
+          <div className="flex-grow text-center">
+            <p className="font-mono font-semibold text-3xl text-teal-500">
+              Posts
+            </p>
+          </div>
+          <div className="w-16"></div>
+        </div>
+      </header>
+
+      <article className="mt-24">
         <ol className="flex flex-col space-y-4 max-w-xl">
           {POSTS.map((post) => {
             return (
