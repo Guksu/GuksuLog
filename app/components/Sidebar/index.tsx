@@ -54,34 +54,38 @@ export default function Sidebar() {
           alt="profile"
         />
         <h3 className="font-semibold text-base">김종민</h3>
-        <p className="text-sm font-normal text-gray-500">
+        <p className="text-sm  text-gray-500">
           프론트엔드 개발자입니다.
           <br />
           개발하면서 발생한 이슈나 이야깃거리를 정리하고 있습니다
         </p>
         <div>
-          <ul className="flex gap-2 mt-2">
+          <ul className="flex gap-6 mt-2">
             {ICONS.map((icon) => (
               <li
                 key={icon.title}
-                className="border border-gray-200 rounded-full"
+                className="relative group border border-gray-200 rounded-full"
               >
                 <a
                   href={icon.type === "web" ? icon.href : `mailto:${icon.href}`}
                   target={icon.type === "web" ? "_blank" : "_self"}
                   rel="noreferrer"
+                  className="block"
                 >
                   <img
                     src={icon.src}
                     alt={icon.title}
-                    className="p-2 w-full h-full "
+                    className="p-2 w-full h-full"
                   />
                 </a>
+                <span className="absolute bottom-[-35px] left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {icon.title}
+                </span>
               </li>
             ))}
           </ul>
         </div>
-        <nav className="mt-5">
+        <nav className="mt-6">
           <ul className="flex flex-col gap-2">
             {Menu.map((menu) => (
               <li key={menu.title}>

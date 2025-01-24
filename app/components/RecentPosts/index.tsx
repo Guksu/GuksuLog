@@ -11,7 +11,7 @@ export default function RecentPosts() {
             return (
               <li
                 key={post.idx}
-                className="border-b border-gray-200 pb-4 cursor-pointer transform transition-transform duration-200 hover:scale-105"
+                className="border-b border-gray-200 pb-4 cursor-pointer "
               >
                 <Link href={`/posts/${post.idx}`} className="block">
                   <h4 className="text-3xl font-semibold transition-colors duration-200 ">

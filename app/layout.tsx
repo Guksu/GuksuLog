@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="font-sans antialiased max-w-screen-xl mx-auto">
+      <body className="font-normal antialiased max-w-screen-xl mx-auto">
         {children}
       </body>
     </html>

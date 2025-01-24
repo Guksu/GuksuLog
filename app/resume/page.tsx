@@ -4,12 +4,12 @@ export default function ResumePage() {
   return (
     <div className="flex flex-col items-center justify-center px-5 py-10">
       <header className="fixed top-0 left-0 w-full bg-white z-10">
-        <div className="flex items-center justify-between max-w-xl mx-auto py-10 px-5">
+        <div className="flex items-center justify-between max-w-7xl mx-auto py-10 px-5">
           <div className="flex items-center">
             <BackBtn />
           </div>
           <div className="flex-grow text-center">
-            <p className="font-mono font-semibold text-3xl text-teal-500">
+            <p className="font-mono font-semibold text-xl text-teal-500">
               Resume
             </p>
           </div>
@@ -23,9 +23,7 @@ export default function ResumePage() {
             주식회사엘케이벤쳐스서울본부
           </h2>
           <p className="text-gray-400">팀원 • 개발팀 (2024.04. ~ 2024.12)</p>
-          <h3 className="mt-4 text-xl font-semibold text-gray-700">
-            담당 업무
-          </h3>
+          <br />
           <ul className="mt-2 list-disc list-inside text-gray-600">
             <li>인생네컷 국내 앱 유지보수 및 기능개발을 담당했습니다.</li>
             <li>
@@ -65,9 +63,7 @@ export default function ResumePage() {
             (주)버츄어라이브
           </h2>
           <p className="text-gray-400">팀원 • 개발팀 (2023.05. ~ 2024.04)</p>
-          <h3 className="mt-4 text-xl font-semibold text-gray-700">
-            담당 업무
-          </h3>
+          <br />
           <ul className="mt-2 list-disc list-inside text-gray-600">
             <li>
               해외 관광객 대상 뷰티 앱 유지보수 및 기능 추가를 담당했습니다.
@@ -100,9 +96,7 @@ export default function ResumePage() {
         <section className="max-w-5xl w-full mt-8 bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold text-gray-800">(주)헬로비즈</h2>
           <p className="text-gray-400">팀원 • 개발팀 (2022.02. ~ 2023.02)</p>
-          <h3 className="mt-4 text-xl font-semibold text-gray-700">
-            담당 업무
-          </h3>
+          <br />
           <ul className="mt-2 list-disc list-inside text-gray-600">
             <li>외주 전문 개발업체에서 프론트엔드 개발을 담당했습니다.</li>
             <li>클라이언트와 직접 소통하며 7개의 MVP제품을 개발했습니다.</li>
