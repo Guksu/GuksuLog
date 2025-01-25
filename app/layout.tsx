@@ -27,6 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <meta
+        name="google-site-verification"
+        content="2ZqzXV-AIvVNHegZm2wN-mN5ibTyUgVDVbtGx1PF2zk"
+      />
       <body className="font-normal antialiased max-w-screen-xl mx-auto">
         {children}
         <Analytics />
