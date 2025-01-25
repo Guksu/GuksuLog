@@ -7,6 +7,7 @@ type Post = {
   title: string;
   content: string;
   date: string;
+  summary: string;
 };
 
 type Props = {
@@ -31,17 +32,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `GuksuLog - ${post.title}`,
-    description: post.content,
+    description: post.summary,
     openGraph: {
       type: "article",
       locale: "ko_KR",
       url: `${process.env.NEXT_PUBLIC_DOMAIN}/posts/${idx}`,
       title: `GuksuLog - ${post.title}`,
-      description: post.content,
+      description: post.summary,
     },
     twitter: {
       title: `GuksuLog - ${post.title}`,
-      description: post.content,
+      description: post.summary,
     },
   };
 }
