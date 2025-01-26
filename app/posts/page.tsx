@@ -19,22 +19,17 @@ export default function PostsPage() {
         </div>
       </header>
 
-      <article className="mt-24">
-        <ol className="flex flex-col gap-5 space-y-4 max-w-xl">
+      <article className="mt-24 px-4">
+        <ol className="flex flex-col gap-6">
           {POSTS.map((post) => {
             return (
-              <li
-                key={post.idx}
-                className="border-b border-gray-200 pb-4 cursor-pointer"
-              >
+              <li key={post.idx} className="border-b border-gray-300 pb-4">
                 <Link href={`/posts/${post.idx}`} className="block">
-                  <h4 className="text-3xl font-semibold transition-colors duration-200 ">
+                  <h4 className="text-lg font-bold text-slate-900 leading-snug">
                     {post.title}
                   </h4>
-                  <p className="my-3 text-sm text-slate-800 transition-colors duration-200 ">
-                    {post.summary}
-                  </p>
-                  <span className="text-sm text-gray-500">{post.date}</span>
+                  <p className="my-2 text-sm text-slate-600">{post.summary}</p>
+                  <span className="text-xs text-gray-500">{post.date}</span>
                 </Link>
               </li>
             );

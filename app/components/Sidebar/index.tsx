@@ -70,7 +70,7 @@ export default function Sidebar() {
                   href={icon.type === "web" ? icon.href : `mailto:${icon.href}`}
                   target={icon.type === "web" ? "_blank" : "_self"}
                   rel="noreferrer"
-                  className="block"
+                  className="block "
                 >
                   <img
                     src={icon.src}
@@ -78,7 +78,7 @@ export default function Sidebar() {
                     className="p-2 w-full h-full"
                   />
                 </a>
-                <span className="absolute bottom-[-35px] left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="pointer-events-none absolute bottom-[-35px] left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {icon.title}
                 </span>
               </li>
