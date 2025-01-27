@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/favicon.ico",
-        width: 42,
-        height: 42,
+        width: 16,
+        height: 16,
         alt: "Favicon",
       },
     ],
