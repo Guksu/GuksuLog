@@ -9,9 +9,9 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/favicon.ico",
-        width: 16,
-        height: 16,
+        url: "/icon.png",
+        width: 256,
+        height: 256,
         alt: "Favicon",
       },
     ],
