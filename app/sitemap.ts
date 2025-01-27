@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: "https://guksu-log.vercel.app/posts/all",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: "https://guksu-log.vercel.app/resume",
       lastModified: new Date(),
       changeFrequency: "yearly",
