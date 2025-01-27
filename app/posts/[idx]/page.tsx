@@ -66,7 +66,7 @@ export default async function Posts({ params }: Props) {
       </header>
       <div className="pt-28 py-10 max-w-5xl w-full">
         <article>
-          <h1 className="font-bold text-4xl text-teal-500">{post.title}</h1>
+          <h1 className="font-bold text-lg text-teal-500">{post.title}</h1>
           <span className="block mt-3 text-sm text-gray-500 border-b border-gray-200 pb-4 ">
             {post.date}
           </span>
