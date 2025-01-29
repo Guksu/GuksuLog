@@ -39,6 +39,11 @@ export default function RootLayout({
         name="google-site-verification"
         content="2ZqzXV-AIvVNHegZm2wN-mN5ibTyUgVDVbtGx1PF2zk"
       />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3204003336752989"
+        crossOrigin="anonymous"
+      />
       <body className="font-normal antialiased max-w-screen-xl mx-auto">
         {children}
         <Analytics />
