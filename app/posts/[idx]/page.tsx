@@ -1,6 +1,11 @@
 import { Metadata } from "next";
 import { BackBtn } from "../components";
 import "./styles.css";
+import hljs from "highlight.js/lib/core";
+import javascript from "highlight.js/lib/languages/javascript";
+import "highlight.js/styles/default.css";
+
+hljs.registerLanguage("javascript", javascript);
 
 type Post = {
   idx: number;
