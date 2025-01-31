@@ -1,3 +1,7 @@
+# Domain
+
+https://guksu-log.vercel.app/
+
 # TODO
 
 - ~~홈 페이지~~
