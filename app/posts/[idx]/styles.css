@@ -13,14 +13,25 @@
   margin-bottom: 1.5rem;
 }
 
-/* 제목 스타일 */
+/* h2 제목 스타일 */
 .content-container h2 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #1f2937;
   margin-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
 }
 
+/* h3 제목 스타일 */
+.content-container h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+/* 본문 텍스트 스타일 */
 .content-container p {
   font-size: 1rem;
   color: #1f2937;
@@ -28,16 +39,26 @@
 }
 
 /* 리스트 스타일 */
-.content-container ol {
+.content-container ol,
+.content-container ul {
   padding-left: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.content-container ol {
   list-style-type: decimal;
 }
 
+.content-container ul {
+  list-style-type: disc;
+}
+
+/* 리스트 아이템 스타일 */
 .content-container li {
   margin-bottom: 0.5rem;
   color: #374151;
+  line-height: 1.6;
 }
 
 /* 코드 블록 스타일 */
@@ -52,10 +73,17 @@
   word-wrap: break-word;
   white-space: pre-wrap;
   box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
 }
 
+/* 인라인 코드 스타일 */
 .content-container code {
+  background-color: #f3f4f6;
+  color: #311fb5;
   padding: 0.2rem 0.4rem;
   border-radius: 0.25rem;
   word-wrap: break-word;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
 }
