@@ -1,0 +1,48 @@
+[
+  {
+    "company": "주식회사엘케이벤쳐스서울본부",
+    "position": "팀원 • 개발팀",
+    "date": "2024.04. ~ 2024.12",
+    "careerDetails": [
+      "인생네컷 국내 앱 유지보수 및 기능개발을 담당했습니다.",
+      "유저가 HEIC파일을 업로드하면 JPEG형태로 변환되도록 이미지 업로드 기능을 개선했습니다.",
+      "애니메이션을 추가한 메인배너와 룰렛 페이지를 개발했습니다.",
+      "next-i18next 라이브러리를 사용하여 다국어 사이트를 개발했습니다.",
+      "CORS 오류를 회피하기 위해 Next.js API Routes를 활용하여 이미지 및 비디오 다운로드 기능을 구현했습니다.",
+      "Canvas API를 사용한 이미지 합성 기능을 구현했으며 MAU 10만명을 달성했습니다.",
+      "Sentry를 활용한 모니터링과 EC2를 활용하여 배포를 진행했습니다.",
+      "외부 IP와 Next.js API Routes를 활용하여 IP 기반 국가 접속 제한 기능을 구현했습니다."
+    ],
+    "techStack": ["Next.js", "React", "TanStack Query", "Recoil", "Vitest"],
+    "tool": ["GitLab", "EC2", "Sentry", "Google Analytics"]
+  },
+  {
+    "company": "(주)버츄어라이브",
+    "position": "팀원 • 개발팀",
+    "date": "2023.05. ~ 2024.04",
+    "careerDetails": [
+      "해외 관광객 대상 뷰티 앱 유지보수 및 기능 추가를 담당했습니다.",
+      "개발환경 개선을 위해 Presentational-Container 패턴을 Atomic 패턴으로 변경하였고 TypeScript 레거시 코드 정리와 ESLint룰을 도입했습니다.",
+      "번들 최적화를 위해 라이브러리를 제거하고 기능을 직접 구현했으며, Dynamic Import를 통해 평균 번들 크기를 130KB 감소시켰습니다.",
+      "인생네컷 점주 전용 앱을 개발했습니다.",
+      "Vitest를 사용한 단위 테스트 환경을 구축했습니다.",
+      "내부 차트는 디자인 요청에 맞춰 svg 태그를 사용하여 직접 구현했습니다.",
+      "Slack, GitLab 및 EC2를 사용하여 CI/CD환경을 구축했습니다."
+    ],
+    "techStack": ["Next.js", "React", "TanStack Query", "Recoil", "Vitest"],
+    "tool": ["GitLab", "EC2", "Sentry", "Google Analytics"]
+  },
+  {
+    "company": "(주)헬로비즈",
+    "position": "팀원 • 개발팀",
+    "date": "2022.02. ~ 2023.02",
+    "careerDetails": [
+      "외주 전문 개발업체에서 프론트엔드 개발을 담당했습니다.",
+      "클라이언트와 직접 소통하며 7개의 MVP제품을 개발했습니다.",
+      "이 과정에서 DB구조를 분석하고 API설계를 일부 담당했습니다.",
+      "기존 상태관리로 사용하던 Redux를 TanStack Query(react-query)와 Zustand로 마이그레이션을 추진하여 서버와 클라이언트 상태관리를 분리시켰습니다."
+    ],
+    "techStack": ["Next.js", "React", "TanStack Query", "Redux", "Zustand"],
+    "tool": ["Jira", "Bitbucket", "Google Analytics"]
+  }
+]
