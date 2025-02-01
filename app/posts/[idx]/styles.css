@@ -46,3 +46,10 @@
 .content-container code {
   @apply bg-gray-100 dark:bg-gray-700 text-purple-600 dark:text-purple-300 px-2 py-1 rounded font-mono text-sm;
 }
+
+.content-container a {
+  @apply text-blue-600 dark:text-blue-400 underline;
+}
+.content-container a:hover {
+  @apply text-blue-800 dark:text-blue-300;
+}
