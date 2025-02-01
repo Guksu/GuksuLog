@@ -3,7 +3,7 @@ import "./styles.css";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import "highlight.js/styles/default.css";
-import { BackBtn } from "@/app/components";
+import { PageHeader } from "@/app/components";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -63,16 +63,12 @@ export default async function Posts({ params }: Props) {
     .then((res) => res.data[0]);
 
   return (
-    <div className="flex flex-col items-center justify-center px-5">
-      <header className="fixed top-0 left-0 w-full bg-white z-10  px-5">
-        <div className="max-w-5xl mx-auto py-10 ">
-          <BackBtn />
-        </div>
-      </header>
-      <div className="pt-28 py-10 max-w-5xl w-full">
+    <div className="flex items-center justify-center px-5 py-10">
+      <PageHeader />
+      <div className="mt-24 px-4 max-w-5xl w-full">
         <article>
           <h1 className="font-bold text-lg text-teal-500">{post.title}</h1>
-          <span className="block mt-3 text-sm text-gray-500 border-b border-gray-200 pb-4 ">
+          <span className="block mt-3 text-sm text-gray-500 dark:text-gray-400 border-b border-gray-200 pb-4 ">
             {post.date}
           </span>
           <div

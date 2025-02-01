@@ -14,13 +14,15 @@ export default function RecentPosts() {
                 className="border-b border-gray-200 pb-4 cursor-pointer "
               >
                 <Link href={`/posts/${post.idx}`} className="block">
-                  <h4 className="text-lg font-bold text-slate-900 leading-snug">
+                  <h4 className="text-lg font-bold text-slate-900 dark:text-white leading-snug">
                     {post.title}
                   </h4>
-                  <p className="my-3 my-2 text-sm text-slate-600 ">
+                  <p className="my-2 text-sm text-slate-600 dark:text-slate-400">
                     {post.summary}
                   </p>
-                  <span className="text-xs text-gray-500">{post.date}</span>
+                  <span className="text-xs text-gray-500 dark:text-gray-400">
+                    {post.date}
+                  </span>
                 </Link>
               </li>
             );

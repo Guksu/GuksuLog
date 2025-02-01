@@ -46,7 +46,7 @@ export default function RootLayout({
         crossOrigin="anonymous"
       />
 
-      <body className="font-normal antialiased max-w-screen-xl mx-auto">
+      <body className="font-normal antialiased max-w-screen-xl mx-auto dark:bg-slate-800">
         {children}
         <Analytics />
       </body>

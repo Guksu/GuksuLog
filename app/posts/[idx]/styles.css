@@ -1,89 +1,48 @@
-/* 외부 컨테이너 */
 .content-container {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background-color: #ffffff;
+  @apply mt-5 p-6 bg-white dark:bg-slate-800 rounded-lg;
 }
 
-/* 제목 스타일 */
 .content-container h1 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #1f2937;
-  margin-bottom: 1.5rem;
+  @apply text-2xl font-extrabold text-gray-900 dark:text-gray-100 mb-6;
 }
 
-/* h2 제목 스타일 */
 .content-container h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 0.5rem;
+  @apply text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 pb-2 border-b-2 border-gray-200 dark:border-gray-600;
 }
 
-/* h3 제목 스타일 */
 .content-container h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 0.75rem;
+  @apply text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3;
 }
 
-/* 본문 텍스트 스타일 */
+.content-container h4 {
+  @apply text-base font-semibold text-gray-700 dark:text-gray-300 mb-2;
+}
+
 .content-container p {
-  font-size: 1rem;
-  color: #1f2937;
-  margin-bottom: 1.5rem;
+  @apply text-base text-gray-900 dark:text-gray-300 mb-6;
 }
 
-/* 리스트 스타일 */
 .content-container ol,
 .content-container ul {
-  padding-left: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  @apply pl-6 mt-4 mb-4;
 }
 
 .content-container ol {
-  list-style-type: decimal;
+  @apply list-decimal;
 }
 
 .content-container ul {
-  list-style-type: disc;
+  @apply list-disc;
 }
 
-/* 리스트 아이템 스타일 */
 .content-container li {
-  margin-bottom: 0.5rem;
-  color: #374151;
-  line-height: 1.6;
+  @apply text-gray-700 dark:text-gray-300 mb-2 leading-relaxed;
 }
 
-/* 코드 블록 스타일 */
 .content-container pre {
-  background-color: whitesmoke;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  max-width: 100%;
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.9rem;
+  @apply bg-gray-100 dark:bg-gray-700 p-4 rounded-lg overflow-x-auto mt-4 mb-4 text-sm font-mono text-gray-800 dark:text-gray-200;
 }
 
-/* 인라인 코드 스타일 */
 .content-container code {
-  background-color: #f3f4f6;
-  color: #311fb5;
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.25rem;
-  word-wrap: break-word;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.9rem;
+  @apply bg-gray-100 dark:bg-gray-700 text-purple-600 dark:text-purple-300 px-2 py-1 rounded font-mono text-sm;
 }

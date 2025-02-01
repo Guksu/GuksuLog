@@ -1,13 +1,14 @@
 import BackBtn from "../BackBtn";
+import DarkModeToggle from "../DarkModeToggle";
 
 interface Props {
-  headerTitle: string;
+  headerTitle?: string;
 }
 
 export default function PageHeader({ headerTitle }: Props) {
   return (
-    <header className="fixed top-0 left-0 w-full bg-white z-10">
-      <div className="flex items-center justify-between max-w-7xl mx-auto py-10 px-5">
+    <header className="fixed top-0 left-0 w-full z-10 bg-white dark:bg-slate-800">
+      <div className="flex items-center justify-between max-w-5xl mx-auto py-10 px-5">
         <div className="w-16 flex items-center">
           <BackBtn />
         </div>
@@ -16,7 +17,9 @@ export default function PageHeader({ headerTitle }: Props) {
             {headerTitle}
           </p>
         </div>
-        <div className="w-16"></div>
+        <div className="w-16 flex items-center">
+          <DarkModeToggle />
+        </div>
       </div>
     </header>
   );
