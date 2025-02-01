@@ -2,7 +2,7 @@ import BackBtn from "../BackBtn";
 import DarkModeToggle from "../DarkModeToggle";
 
 interface Props {
-  headerTitle?: string;
+  headerTitle: string;
 }
 
 export default function PageHeader({ headerTitle }: Props) {

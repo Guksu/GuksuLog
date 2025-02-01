@@ -64,10 +64,12 @@ export default async function Posts({ params }: Props) {
 
   return (
     <div className="flex items-center justify-center px-5 py-10">
-      <PageHeader />
+      <PageHeader headerTitle="Posts" />
       <div className="mt-24 px-4 max-w-5xl w-full">
         <article>
-          <h1 className="font-bold text-lg text-teal-500">{post.title}</h1>
+          <h1 className="font-bold text-lg text-slate-900 dark:text-white">
+            {post.title}
+          </h1>
           <span className="block mt-3 text-sm text-gray-500 dark:text-gray-400 border-b border-gray-200 pb-4 ">
             {post.date}
           </span>
