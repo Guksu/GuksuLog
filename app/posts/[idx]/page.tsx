@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import { BackBtn } from "../components";
 import "./styles.css";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import "highlight.js/styles/default.css";
+import { BackBtn } from "@/app/components";
 
 hljs.registerLanguage("javascript", javascript);
 

@@ -1,22 +1,9 @@
-import { BackBtn } from "../posts/components";
+import { PageHeader } from "../components";
 
 export default function ResumePage() {
   return (
     <div className="flex flex-col items-center justify-center px-5 py-10">
-      <header className="fixed top-0 left-0 w-full bg-white z-10">
-        <div className="flex items-center justify-between max-w-7xl mx-auto py-10 px-5">
-          <div className="flex items-center">
-            <BackBtn />
-          </div>
-          <div className="flex-grow text-center">
-            <p className="font-mono font-semibold text-xl text-teal-500">
-              Resume
-            </p>
-          </div>
-          <div className="w-16"></div>
-        </div>
-      </header>
-
+      <PageHeader headerTitle="Resume" />
       <main className="flex flex-col max-w-3xl items-center w-full  pt-20 px-6">
         <section className="max-w-5xl w-full mt-8 bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold text-gray-800">
