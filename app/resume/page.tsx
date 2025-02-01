@@ -1,4 +1,4 @@
-import { PageHeader } from "../components";
+import { PageHeader } from "@/components";
 import resumeData from "@/json/resume.json";
 
 export default function ResumePage() {

@@ -1,4 +1,4 @@
-import DarkModeToggle from "../DarkModeToggle";
+import { DarkModeToggle } from "@/components";
 import IconBox from "./IconBox";
 import MenuBox from "./MenuBox";
 import ProfileBox from "./ProfileBox";

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import POSTS from "@/json/posts.json";
-import { PageHeader } from "../components";
+import { PageHeader } from "@/components";
 
 export default function PostsPage() {
   return (

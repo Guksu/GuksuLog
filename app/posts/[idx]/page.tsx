@@ -3,7 +3,7 @@ import "./styles.css";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import "highlight.js/styles/default.css";
-import { PageHeader } from "@/app/components";
+import { PageHeader } from "@/components";
 
 hljs.registerLanguage("javascript", javascript);
 
