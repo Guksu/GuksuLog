@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "./components";
 export const metadata: Metadata = {
   title: "국수의 개발 블로그",
   description:
@@ -46,8 +47,8 @@ export default function RootLayout({
         crossOrigin="anonymous"
       />
 
-      <body className="font-normal antialiased max-w-screen-xl mx-auto dark:bg-slate-800">
-        {children}
+      <body className="font-normal antialiased max-w-screen-xl mx-auto bg-white dark:bg-slate-800">
+        <ThemeProvider>{children}</ThemeProvider>
         <Analytics />
       </body>
     </html>
