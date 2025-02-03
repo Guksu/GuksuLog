@@ -6,9 +6,7 @@ interface DarkModeState {
 }
 
 export const useDarkModeStore = create<DarkModeState>((set) => ({
-  isDarkMode: window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? true
-    : false,
+  isDarkMode: false,
   toggleDarkMode: () => {
     set((state) => {
       const newDarkModeState = !state.isDarkMode;

@@ -8,10 +8,12 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const { isDarkMode } = useDarkModeStore();
-
   useEffect(() => {
-    if (isDarkMode) {
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    if (prefersDarkMode) {
+      useDarkModeStore.setState({ isDarkMode: prefersDarkMode });
       document.documentElement.classList.add("dark");
     }
   }, []);
