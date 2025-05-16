@@ -1,13 +1,33 @@
 import Link from "next/link";
-import POSTS from "@/json/posts.json";
+import { PostMeta } from "@/interface/post";
+import matter from "gray-matter";
+import path from "path";
+import fs from "fs";
 
 export default function RecentPosts() {
+  const postsDirectory = path.join(process.cwd(), "posts");
+  const filenames = fs.readdirSync(postsDirectory);
+
+  const posts: PostMeta[] = filenames.map((filename) => {
+    const filePath = path.join(postsDirectory, filename);
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const { data } = matter(fileContents);
+
+    return {
+      idx: filename.replace(/\.md$/, ""),
+      title: data.title ?? "No Title",
+      summary: data.summary ?? "No summary",
+      date: data.date ?? "No date",
+    };
+  });
+  posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+
   return (
     <main>
       <p className="font-mono font-semibold text-xl text-teal-500">최신소식</p>
       <article className="mt-4">
         <ol className="flex flex-col gap-5 space-y-4 max-w-xl">
-          {POSTS.slice(0, 4).map((post) => {
+          {posts.slice(0, 4).map((post) => {
             return (
               <li
                 key={post.idx}

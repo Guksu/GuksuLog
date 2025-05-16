@@ -1,61 +1,42 @@
+import fs from "fs";
+import path from "path";
 import { Metadata } from "next";
-import "./styles.css";
 import { PageHeader } from "@/components";
-
-type Post = {
-  idx: number;
-  title: string;
-  content: string;
-  date: string;
-  summary: string;
-};
+import matter from "gray-matter";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
+import "./style.css";
+import rehypeHighlight from "rehype-highlight";
 
 type Props = {
-  params: Promise<{ idx: string }>;
+  params: { idx: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const idx = (await params).idx;
-  const domain = process.env.NEXT_PUBLIC_DOMAIN;
 
-  const post: Post = await fetch(`${domain}/api/posts?idx=${idx}`, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((res) => res.data[0]);
-
-  if (!post) {
-    return {
-      title: `GuksuLog - NotFound`,
-    };
-  }
+  const { data } = await getPostData(idx);
 
   return {
-    title: `GuksuLog - ${post.title}`,
-    description: post.summary,
+    title: `GuksuLog - ${data.title}`,
+    description: data.summary,
     openGraph: {
+      title: `GuksuLog - ${data.title}`,
+      description: data.summary,
       type: "article",
       locale: "ko_KR",
       url: `${process.env.NEXT_PUBLIC_DOMAIN}/posts/${idx}`,
-      title: `GuksuLog - ${post.title}`,
-      description: post.summary,
     },
     twitter: {
-      title: `GuksuLog - ${post.title}`,
-      description: post.summary,
+      title: `GuksuLog - ${data.title}`,
+      description: data.summary,
     },
   };
 }
 
 export default async function Posts({ params }: Props) {
   const idx = (await params).idx;
-  const domain = process.env.NEXT_PUBLIC_DOMAIN;
-
-  const post: Post = await fetch(`${domain}/api/posts?idx=${idx}`, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((res) => res.data[0]);
+  const { data, content } = await getPostData(idx);
 
   return (
     <div className="flex items-center justify-center px-5 py-10">
@@ -63,17 +44,32 @@ export default async function Posts({ params }: Props) {
       <div className="mt-24 max-w-5xl w-full">
         <article>
           <h1 className="font-bold text-lg text-slate-900 dark:text-white">
-            {post.title}
+            {data.title}
           </h1>
           <span className="block mt-3 text-sm text-gray-500 dark:text-gray-400 border-b border-gray-200 pb-4 ">
-            {post.date}
+            {data.date}
           </span>
-          <div
-            className="mt-5 content-container"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+          <div className="mt-5 content-container prose dark:prose-invert">
+            <MDXRemote
+              source={content}
+              options={{
+                parseFrontmatter: true,
+                mdxOptions: {
+                  remarkPlugins: [remarkGfm],
+                  rehypePlugins: [rehypeHighlight],
+                },
+              }}
+            />
+          </div>
         </article>
       </div>
     </div>
   );
+}
+
+async function getPostData(idx: string) {
+  const filePath = path.join(process.cwd(), "posts", `${idx}.md`);
+  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const { data, content } = matter(fileContent);
+  return { data, content };
 }
