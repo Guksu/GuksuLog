@@ -39,6 +39,7 @@ module.exports = {
     return posts.map((post) => ({
       loc: `/posts/${post.slug}`,
       lastmod: post.lastmod,
+      priority: 1,
     }));
   },
 };
