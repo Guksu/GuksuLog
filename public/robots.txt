@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://guksu-log.vercel.app
+
+# Sitemaps
+Sitemap: https://guksu-log.vercel.app/sitemap.xml

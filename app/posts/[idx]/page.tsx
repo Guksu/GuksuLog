@@ -8,11 +8,13 @@ import remarkGfm from "remark-gfm";
 import "./style.css";
 import rehypeHighlight from "rehype-highlight";
 
-type Props = {
-  params: { idx: string };
-};
+type PageParams = Promise<{ idx: string }>;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: PageParams;
+}): Promise<Metadata> {
   const idx = (await params).idx;
 
   const { data } = await getPostData(idx);
@@ -34,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function Posts({ params }: Props) {
+export default async function Posts({ params }: { params: PageParams }) {
   const idx = (await params).idx;
   const { data, content } = await getPostData(idx);
 
