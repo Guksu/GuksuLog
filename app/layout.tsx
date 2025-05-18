@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     description:
       "프론트엔드 개발자 국수의 개발 블로그입니다. 개발하면서 발생한 이슈나 이야깃거리를 정리하고 있습니다.",
   },
+  robots: "index, follow",
 };
 
 export default function RootLayout({
