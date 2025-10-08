@@ -69,7 +69,7 @@
   background-color: #1e293b; /* slate-800 */
 }
 .content-container ol,
-ul {
+.content-container ul {
   list-style-type: decimal;
   padding: 1rem 1.5rem;
   margin-top: 1rem;
