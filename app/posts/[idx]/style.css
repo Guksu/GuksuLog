@@ -81,6 +81,10 @@
   line-height: 1.5;
 }
 
+.dark .content-container ul {
+  background: none;
+}
+
 .content-container ol li {
   margin-bottom: 0.5rem;
 }
@@ -134,7 +138,6 @@
   border-bottom: none;
 }
 
-/* 🕶 다크 모드 테이블 */
 .dark .content-container table {
   background-color: #1e293b; /* slate-800 */
   color: #cbd5e1; /* slate-300 */
