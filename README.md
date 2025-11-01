@@ -1,3 +1,3 @@
 # Domain
 
-https://guksu-log.vercel.app/
+https://www.guksulog.com/

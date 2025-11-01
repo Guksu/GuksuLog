@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 
-const siteUrl = "https://guksu-log.vercel.app";
+const siteUrl = "https://www.guksulog.com/";
 
 async function getPosts() {
   const postsDir = path.join(__dirname, "posts");
