@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://guksu-log.vercel.app/sitemap.xml",
+    sitemap: "https://www.guksulog.com/sitemap.xml",
   };
 }
