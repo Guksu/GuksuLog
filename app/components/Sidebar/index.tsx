@@ -6,9 +6,9 @@ import ProfileBox from "./ProfileBox";
 export default function Sidebar() {
   return (
     <aside className="w-full md:w-2/5">
-      <div className="flex flex-col gap-3 p-8">
+      <div className="flex flex-col gap-6 p-8">
         <ProfileBox />
-        <div className="flex gap-5 items-center mt-2">
+        <div className="flex gap-6 items-center mt-2">
           <IconBox />
           <DarkModeToggle />
         </div>

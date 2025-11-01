@@ -30,17 +30,20 @@ export default async function PostsPage() {
     <div className="flex flex-col items-center justify-center px-5 py-10">
       <PageHeader headerTitle="Posts" />
       <article className="mt-24 px-4 w-full max-w-3xl">
-        <ol className="flex flex-col gap-6">
+        <ol className="flex flex-col gap-8">
           {posts.map((post) => (
-            <li key={post.idx} className="border-b border-gray-300 pb-4">
+            <li
+              key={post.idx}
+              className="border-b border-gray-200 dark:border-gray-700 pb-6"
+            >
               <Link href={`/posts/${post.idx}`} className="block">
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white leading-snug">
+                <h4 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-snug mb-3">
                   {post.title}
                 </h4>
-                <p className="my-2 text-sm text-slate-600 dark:text-slate-400">
+                <p className="my-2 text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
                   {post.summary}
                 </p>
-                <span className="text-xs text-gray-500 dark:text-gray-400">
+                <span className="inline-block mt-2 text-xs md:text-sm text-gray-500 dark:text-gray-400 font-medium">
                   {post.date}
                 </span>
               </Link>

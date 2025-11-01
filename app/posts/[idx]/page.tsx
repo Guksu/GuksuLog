@@ -41,30 +41,28 @@ export default async function Posts({ params }: { params: PageParams }) {
   const { data, content } = await getPostData(idx);
 
   return (
-    <div className="flex items-center justify-center px-5 py-10">
+    <div className="flex flex-col items-center justify-center px-5 py-10">
       <PageHeader headerTitle="Posts" />
-      <div className="mt-24 max-w-5xl w-full">
-        <article>
-          <h1 className="font-bold text-lg text-slate-900 dark:text-white">
-            {data.title}
-          </h1>
-          <span className="block mt-3 text-sm text-gray-500 dark:text-gray-400 border-b border-gray-200 pb-4 ">
-            {data.date}
-          </span>
-          <div className="mt-5 content-container prose dark:prose-invert">
-            <MDXRemote
-              source={content}
-              options={{
-                parseFrontmatter: true,
-                mdxOptions: {
-                  remarkPlugins: [remarkGfm],
-                  rehypePlugins: [rehypeHighlight],
-                },
-              }}
-            />
-          </div>
-        </article>
-      </div>
+      <article className="mt-24 px-4 w-full max-w-3xl">
+        <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white leading-snug mb-4">
+          {data.title}
+        </h1>
+        <span className="inline-block text-xs md:text-sm text-gray-500 dark:text-gray-400 font-medium border-b border-gray-200 dark:border-gray-700 pb-6 mb-8 w-full">
+          {data.date}
+        </span>
+        <div className="mt-5 content-container prose dark:prose-invert">
+          <MDXRemote
+            source={content}
+            options={{
+              parseFrontmatter: true,
+              mdxOptions: {
+                remarkPlugins: [remarkGfm],
+                rehypePlugins: [rehypeHighlight],
+              },
+            }}
+          />
+        </div>
+      </article>
     </div>
   );
 }
