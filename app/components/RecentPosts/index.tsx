@@ -24,23 +24,30 @@ export default function RecentPosts() {
 
   return (
     <main>
-      <h2 className="font-bold text-xl md:text-2xl text-teal-500 mb-6">최신소식</h2>
+      <div className="flex items-center justify-between mb-8 max-w-xl">
+        <h2 className="font-bold text-xl text-slate-900 dark:text-white tracking-tight">
+          최신 포스트
+        </h2>
+        <Link
+          href="/posts"
+          className="text-xs font-medium text-teal-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+        >
+          모두 보기 →
+        </Link>
+      </div>
       <article>
-        <ol className="flex flex-col gap-6 md:gap-8 max-w-xl">
+        <ol className="flex flex-col gap-0 max-w-xl">
           {posts.slice(0, 4).map((post) => {
             return (
-              <li
-                key={post.idx}
-                className="border-b border-gray-200 dark:border-gray-700 pb-4 md:pb-6"
-              >
-                <Link href={`/posts/${post.idx}`} className="block">
-                  <h4 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white leading-snug mb-2 md:mb-3">
+              <li key={post.idx}>
+                <Link href={`/posts/${post.idx}`} className="group block py-5 border-b border-gray-100 dark:border-gray-700/60 hover:border-teal-500/30 transition-colors">
+                  <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-100 leading-snug mb-1.5 group-hover:text-teal-500 dark:group-hover:text-teal-400 transition-colors">
                     {post.title}
                   </h4>
-                  <p className="my-2 text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2 mb-2">
                     {post.summary}
                   </p>
-                  <span className="inline-block mt-2 text-xs md:text-sm text-gray-500 dark:text-gray-400 font-medium">
+                  <span className="text-xs text-gray-400 dark:text-gray-500 font-medium tabular-nums">
                     {post.date}
                   </span>
                 </Link>

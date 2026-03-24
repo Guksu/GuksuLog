@@ -5,6 +5,7 @@ import { PageHeader } from "@/components";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import "highlight.js/styles/atom-one-dark.css";
 import "./style.css";
 import rehypeHighlight from "rehype-highlight";
 
@@ -43,14 +44,14 @@ export default async function Posts({ params }: { params: PageParams }) {
   return (
     <div className="flex flex-col items-center justify-center px-5 py-10">
       <PageHeader headerTitle="Posts" />
-      <article className="mt-24 px-4 w-full max-w-3xl">
+      <article className="mt-14 px-4 w-full max-w-3xl">
         <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white leading-snug mb-4">
           {data.title}
         </h1>
-        <span className="inline-block text-xs md:text-sm text-gray-500 dark:text-gray-400 font-medium border-b border-gray-200 dark:border-gray-700 pb-6 mb-8 w-full">
+        <span className="inline-block text-sm text-gray-500 dark:text-gray-400 font-medium border-b border-gray-200 dark:border-gray-700 pb-6 mb-8 w-full">
           {data.date}
         </span>
-        <div className="mt-5 content-container prose dark:prose-invert">
+        <div className="mt-5 content-container">
           <MDXRemote
             source={content}
             options={{

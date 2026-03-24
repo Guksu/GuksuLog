@@ -18,13 +18,13 @@ export default function MenuBox() {
   ];
 
   return (
-    <nav className="mt-8">
-      <ul className="flex flex-col gap-4">
+    <nav className="mt-4">
+      <ul className="flex flex-col gap-1">
         {Menu.map((menu) => (
           <li key={menu.title}>
             <Link
               href={menu.href}
-              className="text-lg font-semibold text-slate-700 dark:text-slate-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+              className="py-2 text-base font-medium text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
             >
               {menu.title}
             </Link>

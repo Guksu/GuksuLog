@@ -28,7 +28,7 @@ export default function PageHeader({ headerTitle }: Props) {
         </div>
         <div className="flex-grow text-center">
           <h2
-            className="font-bold text-2xl text-teal-500 cursor-pointer transition-colors hover:text-teal-600 dark:hover:text-teal-400"
+            className="font-bold text-2xl text-teal-500 cursor-pointer"
             onClick={handleClickTitle}
           >
             {headerTitle}

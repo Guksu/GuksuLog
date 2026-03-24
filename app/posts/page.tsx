@@ -47,21 +47,21 @@ export default async function PostsPage() {
   return (
     <div className="flex flex-col items-center justify-center px-5 py-10">
       <PageHeader headerTitle="Posts" />
-      <article className="mt-24 px-4 w-full max-w-3xl">
-        <ol className="flex flex-col gap-8">
+      <article className="mt-14 px-4 w-full max-w-3xl">
+        <ol className="flex flex-col gap-0">
           {posts.map((post) => (
-            <li
-              key={post.idx}
-              className="border-b border-gray-200 dark:border-gray-700 pb-6"
-            >
-              <Link href={`/posts/${post.idx}`} className="block">
-                <h4 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-snug mb-3">
+            <li key={post.idx}>
+              <Link
+                href={`/posts/${post.idx}`}
+                className="group block py-6 border-b border-gray-100 dark:border-gray-700/60 hover:border-teal-500/30 transition-colors"
+              >
+                <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-100 leading-snug mb-2 group-hover:text-teal-500 dark:group-hover:text-teal-400 transition-colors">
                   {post.title}
                 </h4>
-                <p className="my-2 text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2 mb-3">
                   {post.summary}
                 </p>
-                <span className="inline-block mt-2 text-xs md:text-sm text-gray-500 dark:text-gray-400 font-medium">
+                <span className="text-xs text-gray-400 dark:text-gray-500 font-medium tabular-nums">
                   {post.date}
                 </span>
               </Link>
