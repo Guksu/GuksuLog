@@ -1,4 +1,4 @@
-import { RecentPosts, Sidebar } from "./components";
+import { RecentPosts, Sidebar, FeaturedProjects } from "./components";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Sidebar />
       <main className="w-full md:w-3/5 px-8 py-10 md:py-16">
         <RecentPosts />
+        <FeaturedProjects />
       </main>
     </div>
   );

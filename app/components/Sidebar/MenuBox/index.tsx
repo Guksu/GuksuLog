@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 type MenuType = {
-  title: "Posts" | "Resume";
-  href: "/posts" | "/resume";
+  title: "Posts" | "Projects" | "Resume";
+  href: "/posts" | "/projects" | "/resume";
 };
 
 export default function MenuBox() {
@@ -10,6 +10,10 @@ export default function MenuBox() {
     {
       title: "Posts",
       href: "/posts",
+    },
+    {
+      title: "Projects",
+      href: "/projects",
     },
     {
       title: "Resume",
